@@ -20,8 +20,8 @@ jobs:
     name: integration-tests (PHP ${{ matrix.php-versions }})
     steps:
       - uses: actions/checkout@v4
-      - name: Install PHP
-        uses: shivammathur/setup-php@v2
+      - name: Setup PHP Action
+        uses: shivammathur/setup-php@2.32.0
         with:
           php-version: ${{ matrix.php-versions }}
       - name: Validate composer.json and composer.lock
